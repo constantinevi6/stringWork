@@ -1,21 +1,18 @@
 //
 //  stringWork.hpp
-//  stringWork
+//  ASPS
 //
-//  Created by Constantine VI on 2021/11/8.
+//  Created by Constantine VI on 2021/10/14.
+//  Copyright © 2021 CSRSR. All rights reserved.
 //
 
-#ifndef stringWork_
-#define stringWork_
+#ifndef stringWork_h
+#define stringWork_h
 
-/* The classes below are exported */
-#pragma GCC visibility push(default)
+#include <vector>
+#include <string>
 
-class stringWork
-{
-    public:
-    void HelloWorld(const char *);
-};
+// 分割std::string字串, splitstring(std::string 輸入字串, std::string 分隔字元)
+std::vector<std::string> splitstring(std::string Inputstring, std::string Separate);
 
-#pragma GCC visibility pop
-#endif
+#endif /* stringWork_h */

@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7CA791427390B800078ABCE /* stringWork.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A7CA791327390B800078ABCE /* stringWork.hpp */; };
-		A7CA791627390B800078ABCE /* stringWorkPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A7CA791527390B800078ABCE /* stringWorkPriv.hpp */; };
-		A7CA791827390B800078ABCE /* stringWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7CA791727390B800078ABCE /* stringWork.cpp */; };
+		A7CA792027390C760078ABCE /* stringWork.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A7CA791E27390C760078ABCE /* stringWork.hpp */; };
+		A7CA792127390C760078ABCE /* stringWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7CA791F27390C760078ABCE /* stringWork.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A7CA791027390B800078ABCE /* libstringWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libstringWork.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7CA791327390B800078ABCE /* stringWork.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stringWork.hpp; sourceTree = "<group>"; };
-		A7CA791527390B800078ABCE /* stringWorkPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stringWorkPriv.hpp; sourceTree = "<group>"; };
-		A7CA791727390B800078ABCE /* stringWork.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stringWork.cpp; sourceTree = "<group>"; };
+		A7CA791E27390C760078ABCE /* stringWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stringWork.hpp; sourceTree = "<group>"; };
+		A7CA791F27390C760078ABCE /* stringWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringWork.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,9 +47,8 @@
 		A7CA791227390B800078ABCE /* stringWork */ = {
 			isa = PBXGroup;
 			children = (
-				A7CA791327390B800078ABCE /* stringWork.hpp */,
-				A7CA791527390B800078ABCE /* stringWorkPriv.hpp */,
-				A7CA791727390B800078ABCE /* stringWork.cpp */,
+				A7CA791F27390C760078ABCE /* stringWork.cpp */,
+				A7CA791E27390C760078ABCE /* stringWork.hpp */,
 			);
 			path = stringWork;
 			sourceTree = "<group>";
@@ -63,8 +60,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7CA791427390B800078ABCE /* stringWork.hpp in Headers */,
-				A7CA791627390B800078ABCE /* stringWorkPriv.hpp in Headers */,
+				A7CA792027390C760078ABCE /* stringWork.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7CA791827390B800078ABCE /* stringWork.cpp in Sources */,
+				A7CA792127390C760078ABCE /* stringWork.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
