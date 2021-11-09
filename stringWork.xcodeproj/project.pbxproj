@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A75A804E273A086D00F1DF59 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = A75A804D273A086C00F1DF59 /* Makefile */; };
 		A7CA792027390C760078ABCE /* stringWork.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A7CA791E27390C760078ABCE /* stringWork.hpp */; };
 		A7CA792127390C760078ABCE /* stringWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7CA791F27390C760078ABCE /* stringWork.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A75A804C273A086C00F1DF59 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A75A804D273A086C00F1DF59 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		A7CA791027390B800078ABCE /* libstringWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libstringWork.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CA791E27390C760078ABCE /* stringWork.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stringWork.hpp; sourceTree = "<group>"; };
 		A7CA791F27390C760078ABCE /* stringWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringWork.cpp; sourceTree = "<group>"; };
@@ -31,6 +34,8 @@
 		A7CA790727390B800078ABCE = {
 			isa = PBXGroup;
 			children = (
+				A75A804D273A086C00F1DF59 /* Makefile */,
+				A75A804C273A086C00F1DF59 /* README.md */,
 				A7CA791227390B800078ABCE /* stringWork */,
 				A7CA791127390B800078ABCE /* Products */,
 			);
@@ -121,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75A804E273A086D00F1DF59 /* Makefile in Sources */,
 				A7CA792127390C760078ABCE /* stringWork.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
