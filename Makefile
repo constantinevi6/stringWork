@@ -1,7 +1,7 @@
 CC		:= gcc
 CXX		:= g++
 AR      := ar
-CXXFLAGS := -std=c++17 -Wall -Wextra -g -fopenmp
+CXXFLAGS := -std=c++17 -Wall -Wextra -g
 LINKFLAGS := rcs
 
 PROJECT     := stringWork
@@ -18,42 +18,43 @@ ifeq ($(PKG),)
 endif
 
 INC_PC	?= pkg-config --cflags $(PKG)
-INC	:= -I$(INCLUDEDIR) $(shell $(INC_PC))
+INC	:= -I$(INCDIR) $(shell $(INC_PC))
 
 LIB_PC	?= pkg-config --libs $(PKG)
 LIB		:= -Llib64 $(shell $(LIB_PC))
 LDFLAGS :=
 
 ifeq ($(OS),Windows_NT)
-TARGET	:= $(PROJECT).lib
+TARGET	:= $(LIBDIR)/$(PROJECT).lib
 
 else
-TARGET	:= $(PROJECT).a
+TARGET	:= $(LIBDIR)/$(PROJECT).a
 
 endif
 
-$(LIBDIR)/$(TARGET): $(SRCDIR)/$(PROJECT).o
+SRCS	:= $(wildcard $(SRCDIR)/*.cpp)
+OBJS 	:= $(patsubst %.cpp,%.o,$(SRCS))
+
+$(TARGET): $(OBJS)
 	@mkdir -p $(@D)
-	$(AR) $(LINKFLAGS) $@ $<
+	$(AR) $(LINKFLAGS) $@ $^
+
+%.o: %.cpp
+	${CXX} -c -o $@ $< ${CXXFLAGS} ${INC}
+
+
+all: $(TARGET)
 	@make clear
-
-%.o: %.cpp $(INCDIR)/*.hpp
-	${CXX} -c -o $@ $< ${CXXFLAGS} ${INC} ${LIB} $(LDFLAGS)
-
-
-all: $(BINDIR)/$(EXECUTABLE)
 
 clear:
 	$(RM) -rf $(SRCDIR)/*.o
 	
 clean: clear
-	$(RM) -rf $(BINDIR)/$(EXECUTABLE)
+	$(RM) -rf $(TARGET)
 	
-install: $(PREFIX)/$(TARGET)
-	cp $(LIBDIR)/$(TARGET) $(PREFIX)/$(TARGET)
+install: $(PREFIX)/$(LIBDIR)/$(TARGET)
+	cp $(TARGET) $(PREFIX)/$(LIBDIR)/$(TARGET)
 		
-remove: $(PREFIX)/$(TARGET)
-	$(RM) -rf $(PREFIX)/$(TARGET)
+remove: $(PREFIX)/$(LIBDIR)/$(TARGET)
+	$(RM) -rf $(PREFIX)/$(LIBDIR)/$(TARGET)
 	
-run: all
-	./$(BINDIR)/$(EXECUTABLE)
