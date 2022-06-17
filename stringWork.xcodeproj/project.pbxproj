@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A75A804E273A086D00F1DF59 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = A75A804D273A086C00F1DF59 /* Makefile */; };
 		A7CA792027390C760078ABCE /* stringWork.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A7CA791E27390C760078ABCE /* stringWork.hpp */; };
 		A7CA792127390C760078ABCE /* stringWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7CA791F27390C760078ABCE /* stringWork.cpp */; };
 /* End PBXBuildFile section */
@@ -126,7 +125,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A75A804E273A086D00F1DF59 /* Makefile in Sources */,
 				A7CA792127390C760078ABCE /* stringWork.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
