@@ -12,7 +12,7 @@
 
 using namespace std;
 
-std::vector<std::string> splitstring(std::string Inputstring, std::string Separate) {
+std::vector<std::string> splitstring(std::string Inputstring, std::string Separate, bool KeepSpace) {
     vector<string> stringReturn;
     size_t Break = 0;
     size_t stringSize;
@@ -27,13 +27,15 @@ std::vector<std::string> splitstring(std::string Inputstring, std::string Separa
             }
         }
         else {
-            // 去除字串最前方的空格
-            while (Outputstring.find(" ") == 0 && Outputstring.size() > 0) {
-                Outputstring.assign(Outputstring, 1, Outputstring.size());
-            }
-            // 去除字串最後方的空格
-            while (Outputstring.rfind(" ") == Outputstring.size() - 1 && Outputstring.size() > 0) {
-                Outputstring.assign(Outputstring, 0, Outputstring.size() - 1);
+            if (!KeepSpace) {
+                // 去除字串最前方的空格
+                while (Outputstring.find(" ") == 0 && Outputstring.size() > 0) {
+                    Outputstring.assign(Outputstring, 1, Outputstring.size());
+                }
+                // 去除字串最後方的空格
+                while (Outputstring.rfind(" ") == Outputstring.size() - 1 && Outputstring.size() > 0) {
+                    Outputstring.assign(Outputstring, 0, Outputstring.size() - 1);
+                }
             }
             stringReturn.push_back(Outputstring);
         }

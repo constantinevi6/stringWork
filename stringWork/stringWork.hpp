@@ -13,6 +13,6 @@
 #include <string>
 
 // 分割std::string字串, splitstring(std::string 輸入字串, std::string 分隔字元)
-std::vector<std::string> splitstring(std::string Inputstring, std::string Separate);
+std::vector<std::string> splitstring(std::string Inputstring, std::string Separate, bool KeepSpace = false);
 
 #endif /* stringWork_h */
