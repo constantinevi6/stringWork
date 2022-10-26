@@ -55,3 +55,15 @@ std::vector<std::string> splitstring(std::string Inputstring, std::string Separa
     } while (Break != std::string::npos);
     return stringReturn;
 }
+
+std::string replacestring(std::string Inputstring, std::string replaceTarget, std::string replacestring)
+{
+    size_t Break = Inputstring.find(replaceTarget);
+    size_t stringSize = replaceTarget.size();;
+    while (Break != std::string::npos)
+    {
+        Inputstring.replace(Break, stringSize, replacestring);
+        Break = Inputstring.find(replaceTarget);
+    }
+    return Inputstring;
+}
