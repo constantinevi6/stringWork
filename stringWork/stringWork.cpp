@@ -36,6 +36,14 @@ std::vector<std::string> splitstring(std::string Inputstring, std::string Separa
                 while (Outputstring.rfind(" ") == Outputstring.size() - 1 && Outputstring.size() > 0) {
                     Outputstring.assign(Outputstring, 0, Outputstring.size() - 1);
                 }
+                // 去除字串最前方的tab
+                while (Outputstring.find("\t") == 0 && Outputstring.size() > 0) {
+                    Outputstring.assign(Outputstring, 1, Outputstring.size());
+                }
+                // 去除字串最後方的tab
+                while (Outputstring.rfind("\t") == Outputstring.size() - 1 && Outputstring.size() > 0) {
+                    Outputstring.assign(Outputstring, 0, Outputstring.size() - 1);
+                }
             }
             stringReturn.push_back(Outputstring);
         }
