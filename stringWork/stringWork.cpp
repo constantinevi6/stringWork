@@ -9,6 +9,8 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -66,4 +68,16 @@ std::string replacestring(std::string Inputstring, std::string replaceTarget, st
         Break = Inputstring.find(replaceTarget);
     }
     return Inputstring;
+}
+
+std::string floatToStringFixed(float value, int precision) {
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(precision) << value;
+    return out.str();
+}
+
+std::string floatToStringFixed(double value, int precision) {
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(precision) << value;
+    return out.str();
 }

@@ -16,4 +16,7 @@
 std::vector<std::string> splitstring(std::string Inputstring, std::string Separate, bool KeepSpace = false);
 std::string replacestring(std::string Inputstring, std::string replaceTarget, std::string replacestring);
 
+// 將浮點數字轉為固定位數的文字
+std::string floatToStringFixed(float value, int precision);
+std::string floatToStringFixed(double value, int precision);
 #endif /* stringWork_h */
